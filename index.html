@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api docs browser</title>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script src="https://cdn.jsdelivr.net/npm/@scalar/api-reference"></script>
+
+    <!-- Initialize the Scalar API Reference -->
+    <script>
+        Scalar.createApiReference('#app', {
+            // The URL of the OpenAPI/Swagger document
+            url: 'specs/petstore.yaml',
+            // Avoid CORS issues
+            proxyUrl: 'https://proxy.scalar.com',
+        })
+    </script>
+</body>
+
+</html>
