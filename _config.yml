@@ -1,0 +1,11 @@
+title: Spec Hub
+baseurl: "/spec-hub/" # the subpath of your site, e.g. /blog
+url: "https://jefwillems.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+github_username:  Jefwillems
+
+defaults:
+  - scope:
+      path: "specs/"
+    values:
+      tags:
+        - openapi
