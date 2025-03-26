@@ -20,10 +20,11 @@
             // url: '_specs/petstore.yaml',
             // Avoid CORS issues
             proxyUrl: 'https://proxy.scalar.com',
-            sources: [{% for asset in site.static_files %}
+            {% assign specs = site.static_files | where: "openapi", true %}
+            sources: [{% for asset in specs %}
             {
                 title: '{{ asset.name }}',
-                url: '{{ asset.path }}'
+                url: '{{ asset.path | relative_url }}'
             },
             {% endfor %}]
         })

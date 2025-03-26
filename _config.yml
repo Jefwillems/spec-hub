@@ -5,7 +5,8 @@ github_username:  Jefwillems
 
 defaults:
   - scope:
-      path: "specs/"
+      path: "specs"
     values:
+      openapi: true
       tags:
         - openapi
